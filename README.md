@@ -1,4 +1,6 @@
-# Experiment--03-Half-Subtractor-and-Full-subtractor
+NAME : ALIYA SHEEMA N
+REGISTER NO : 23005529
+# Experiment 03 Half Subtractor and Full subtractor
 ## Implementation-of-Half-subtractor-and-Full-subtractor-circuit
 ## AIM:
 To design a half subtractor and full subtractor circuit and verify its truth table in Quartus using Verilog programming.
@@ -26,29 +28,88 @@ A full subtractor is a combinational circuit that performs subtraction involving
 Diff = A ⊕ B ⊕ Bin B = A'Bin + A'B + BBin
 
 ## Procedure
+1. Create a New Project:
+   - Open Quartus and create a new project by selecting "File" > "New Project Wizard."
+   - Follow the wizard's instructions to set up your project, including specifying the project name, location, and target device (FPGA).
 
+2. Create a New Design File:
+   - Once the project is created, right-click on the project name in the Project Navigator and select "Add New File."
+   - Choose "Verilog HDL File" or "VHDL File," depending on your chosen hardware description language.
 
+3. Write the Combinational Logic Code:
+   - Open the newly created Verilog or VHDL file and write the code for your combinational logic.
+     
+4. Compile the Project:
+   - To compile the project, click on "Processing" > "Start Compilation" in the menu.
+   - Quartus will analyze your code, synthesize it into a netlist, and perform optimizations based on your target FPGA device.
 
-Write the detailed procedure here 
+5. Analyze and Fix Errors:*
+   - If there are any errors or warnings during the compilation process, Quartus will display them in the Messages window.
+   - Review and fix any issues in your code if necessary.
+   - View the RTL diagram.
+
+6.*Verification:
+   - Click on "File" > "New" > "Verification/Debugging Files" > "University Program VWF".
+   - Once Waveform is created Right Click on the Input/Output Panel > " Insert Node or Bus" > Click on Node Finder > Click On "List" > Select All.
+   - Give the Input Combinations according to the Truth Table amd then simulate the Output Waveform.
 
 
 ## Program:
-/*
-Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
+## HALF ADDER
+module halfsub(x,y,D,B);
 
-## Output:
+input x,y;
+
+output D,B;
+
+wire xbar;
+
+xor(D,x,y);
+
+not(xbar,x);
+
+and(B,xbar,y);
+
+endmodule 
+
+## FULL ADDER
+module FS(output D,B,input x,y,z);
+
+assign D =x^y^z;
+
+assign B =~x&(y^z)|y&z;
+
+endmodule 
+
 
 ## Truthtable
+## HALF ADDER
+![HS TT](https://github.com/23005529/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/139842207/965b5b70-53f4-4578-a222-3384a5aa7083)
+
+## FULL ADDER
+![FS TT](https://github.com/23005529/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/139842207/70d57313-c507-44e5-a3ff-9b838c43d172)
+
+
 
 
 
 ##  RTL realization
+## HALF ADDER
+![HS RTL](https://github.com/23005529/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/139842207/4c8b0f2b-55a6-4fc4-8076-62733539d302)
+
+## FULL ADDER
+![FS RTL](https://github.com/23005529/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/139842207/b9fded47-cd47-44e9-a17b-621116c609f1)
 
 
-## Timing diagram 
+
+
+## Waveform
+## HALF ADDER
+![wf hs](https://github.com/23005529/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/139842207/2aa9bcf2-ad11-44fb-91e5-15c2288985db)
+
+## FULL ADDER
+![WF FS](https://github.com/23005529/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/139842207/f95a5b44-dcaf-48b1-ba91-6b0c31558f15)
+
 
 ## Result:
 Thus the half subtractor and full subtractor circuits are designed and the truth tables is verified using quartus software.
