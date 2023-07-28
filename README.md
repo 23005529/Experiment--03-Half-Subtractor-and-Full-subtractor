@@ -55,7 +55,7 @@ Diff = A ⊕ B ⊕ Bin B = A'Bin + A'B + BBin
 
 
 ## Program:
-## HALF ADDER
+## HALF SUBTRACTOR
 module halfsub(x,y,D,B);
 
 input x,y;
@@ -72,7 +72,7 @@ and(B,xbar,y);
 
 endmodule 
 
-## FULL ADDER
+## FULL SUBTRACTOR
 module FS(output D,B,input x,y,z);
 
 assign D =x^y^z;
@@ -83,10 +83,10 @@ endmodule
 
 
 ## Truthtable
-## HALF ADDER
+## HALF SUBTRACTOR
 ![HS TT](https://github.com/23005529/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/139842207/965b5b70-53f4-4578-a222-3384a5aa7083)
 
-## FULL ADDER
+## FULL SUBTRACTOR
 ![FS TT](https://github.com/23005529/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/139842207/70d57313-c507-44e5-a3ff-9b838c43d172)
 
 
@@ -94,20 +94,20 @@ endmodule
 
 
 ##  RTL realization
-## HALF ADDER
+## HALF SUBTRACTOR
 ![HS RTL](https://github.com/23005529/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/139842207/4c8b0f2b-55a6-4fc4-8076-62733539d302)
 
-## FULL ADDER
+## FULL SUBTRACTOR
 ![FS RTL](https://github.com/23005529/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/139842207/b9fded47-cd47-44e9-a17b-621116c609f1)
 
 
 
 
 ## Waveform
-## HALF ADDER
+## HALF SUBTRACTOR
 ![wf hs](https://github.com/23005529/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/139842207/2aa9bcf2-ad11-44fb-91e5-15c2288985db)
 
-## FULL ADDER
+## FULL SUBTRACTOR
 ![WF FS](https://github.com/23005529/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/139842207/f95a5b44-dcaf-48b1-ba91-6b0c31558f15)
 
 
